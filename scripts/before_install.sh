@@ -1,2 +1,2 @@
 #!/bin/bash
-rm -rf /opt/apache-tomcat-8.5.59/webapps/ccdemo*
+rm -rf /usr/share/tomcat8/webapps/ccdemo*
