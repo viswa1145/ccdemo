@@ -8,7 +8,7 @@ public class HelloWorldController {
 
 	@GetMapping("/hello")
 	public String sayHello() {
-		return "Hello from Tomcat";
+		return "Hello from Official Tomcat Server";
 	}
 	
 }
