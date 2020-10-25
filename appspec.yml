@@ -3,7 +3,7 @@ version: 0.0
 os: linux
 files:
   - source: target/ccdemo.war
-    destination: /opt/apache-tomcat-8.5.59/webapps/
+    destination: /usr/share/tomcat8/webapps/
 hooks:
   BeforeInstall:
     - location: scripts/before_install.sh
