@@ -1,4 +1,19 @@
 steps:
+- name: 'maven:3.6.1-jdk-8'
+  entrypoint: 'bash'
+  args:
+    - -c
+    - |
+      unset MAVEN_CONFIG \
+      && echo "34.125.18.218" > /etc/hosts \
+      && mvn sonar:sonar -q -Dsonar.login=93f2f2d755afed61d0924428ebfa6583adf681a0 \
+      '-Dsonar.projectKey=cio-myproject' \
+      '-Dsonar.projectName=cio-myproject' \
+      '-Dsonar.host.url=http://34.125.18.218:9000' \
+      '-Dsonar.qualitygate.wait=true' \
+      'allow_failure: true'
+  dir: 'dataflows/generic/pubsub-sftp/src'
+  id: 'sonarqube-analysis'
 - name: "gcr.io/cloud-builders/mvn"
   args:
   - package
