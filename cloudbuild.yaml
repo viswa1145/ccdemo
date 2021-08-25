@@ -3,3 +3,9 @@
     entrypoint: mvn
     id: build
     args: ['clean', 'install']
+  artifacts:
+  objects:
+    location: 'gs://testing-art/'
+    paths: ['/workspace/target/ccdemo.war']
+
+
