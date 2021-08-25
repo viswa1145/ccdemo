@@ -6,7 +6,7 @@ artifacts:
   objects:
     location: "gs://testing-art/"
     paths:
-    - "target/${_TARGET}"
+    - "/workspace/target/*"
  
 
 
